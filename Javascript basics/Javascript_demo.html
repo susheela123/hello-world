@@ -1,0 +1,24 @@
+<html>
+<head><title>Javascript demonstration</title>
+<script type="text/javascript">
+	function myalert(name){
+		alert('Welcome '+name);
+	}
+	function myprompt(){
+		var name = prompt('What is your name?');
+		myalert(name);
+		myconfirm();
+	}
+	function myconfirm() {
+		var c = confirm('Do you like my webpage?');
+		if(c == true) {alert('THANK YOU');}
+		else {
+			alert('SORRY FOR INCONVINEIENCE');
+		}
+	}
+</script>
+</head>
+<body onload = "myprompt();">
+	<h1>Javascript demonstration</h1>
+</body>
+</html>

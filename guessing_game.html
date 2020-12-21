@@ -1,0 +1,70 @@
+<html>
+<head><title>Number guessing game.</title>
+<script>
+	var target; // computer guesses the random number
+	var target1;  // converted random number into integer
+	var finished = false; // keeps track of status of the game.
+	var guess_input_text; // user input
+	var guess_input;  // user input converted to integer
+	var guesses = 0; // tracking the number of guesses.
+	function game(){
+		target = Math.random()*100;
+		
+		target1 = Math.floor(target);
+		
+		var guess;
+		while(!finished){
+			guess_input_text=prompt("The computer has chosen a number between 1 and 100. Try to guess the number. to end the game press 0.");
+			
+			 guess_input = parseInt(guess_input_text) ;
+			
+			guesses++;
+			if(!guess_input){  // if user enters no number or 0, the game will end.
+				
+				finished = true;
+				break;
+			}
+			else{
+				
+				finished = check(guess_input); // checks whether user guesses the computer's number. 
+
+			}
+
+
+
+		} 
+		alert("End of this game");
+	}
+	function check(guess) {
+		if(guess_input == target1){
+		alert("Yes you entered correct answer.You guessed the number in "+guesses);
+		}	
+		
+		if(guess < 1 || guess > 100){
+			alert("Out of range, Please enter a number between 1 and 100");
+			return false;
+		}
+
+		if (guess < target1){
+			alert("The number is smaller");
+			return false;
+		}
+		if (guess > target1){
+			alert ("The number is larger");
+			return false;
+		}
+	    if(isNan(guess)){
+			alert("Please enter a valid number.");
+			return false;
+		}
+
+		return true;
+	}
+
+
+</script>
+</head>
+<body onload = "game();">
+	
+</body>
+</html>
