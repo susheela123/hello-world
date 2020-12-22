@@ -1,0 +1,30 @@
+
+body{
+	background-color: #E58C7B;
+	 background-image: url("images/background.jpg");
+}
+
+.back {
+    width: 80%;
+    height: 100%;
+    background: #E58C7B;
+    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%; 
+    margin-top: 10px;
+
+table{
+	
+	margin-right: auto;
+	padding-right: 0;
+}
+p{
+	width: 90%;
+	height:80%;
+	background-color: yellow;
+}
+.center {
+
+  width: 20px;
+  height: 20px;
+}
